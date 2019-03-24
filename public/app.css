@@ -1,0 +1,9 @@
+/* Css for all */
+
+.hide-element {
+    display:none;
+}
+
+body.menu table thead th {
+    text-align: left;
+}

@@ -32,9 +32,11 @@ It handles the following:
 
 The available **routes** are as follows:
 
+### API
+
 **P.S.**: Bold parameters are required.
 
-1.  **_/users_**
+1.  **_/api/users_**
 
 - **[GET]** - Authenticated users can delete their profile and some associated contents. Requires:
 
@@ -135,7 +137,7 @@ The available **routes** are as follows:
 
   * [500] Internal server error.
 
-2. **_/tokens_**
+2. **_/api/tokens_**
 
 - **[POST]** - Authenticate/Log in a user. Requires:
 
@@ -199,7 +201,7 @@ The available **routes** are as follows:
 
   * [500] Internal server error.
 
-3. **_/menu_**
+3. **_/api/menu_**
 
 - **[GET]** - Authenticated users can view available menu.
 
@@ -372,3 +374,23 @@ The available **routes** are as follows:
   * [422] Unprocessable Entity. Invalid data provided.
 
   * [500] Internal server error.
+
+### WEB
+
+The web routes includes:
+
+**Authentication-requried Routes**:
+
+  * **/menu**
+
+  * **/cart**
+
+  * **/logout**
+
+**Other Routes**:
+
+  * **/**
+
+  * **login**
+
+  * **signup**

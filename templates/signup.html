@@ -1,0 +1,22 @@
+<h1>Welcome to Pizzaria</h1>
+
+<h2>Please complete the form to signup to the service.</h2>
+
+<form action="/api/users" method="POST" id='signupForm'>
+    <label for="firstname">First name <input type="text" name="firstName" required='required' autofocus></label>
+    <br>
+    <br>
+    <label for="lastname">Last name <input type="text" name="lastName" required='required'></label>
+    <br>
+    <br>
+    <label for="email">Email <input type="email" name="email" required='required'></label>
+    <br>
+    <br>
+    <label for="address">Address <textarea style='resize:none' cols='30' rows='3' type="text" name="address" required='required'></textarea></label>
+    <br>
+    <br>
+    <label for="password">Password <input type="password" name="password" required='required'></label>
+    <br>
+    <br>
+    <input type="submit" value="Signup">
+</form>

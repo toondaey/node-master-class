@@ -20,5 +20,8 @@ try {
     config = require('./config');
 }
 
+// Global configs.
+config = Object.assign(config, require('./app'));
+
 // Export module;
 module.exports = config;
