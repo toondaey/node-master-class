@@ -1,0 +1,38 @@
+/**
+ * Configuration options example.
+ */
+
+/**
+ * @description Main container
+ * @type {Object}
+ */
+let lib = {
+    httpPort: 3000,
+    httpsPort: 3001,
+    sessionValidity: 120, // 2 hrs in minutes.
+    refreshValidity: 60 * 24 * 7, // 1 week in minutes
+    environment: 'staging',
+    hashingSecret: 'staging secret',
+    stripe: {
+        baseUrl: 'api.stripe.com',
+        keys: {
+            public: 'your public stripe key',
+            secret: 'your secret stripe key'
+        },
+    },
+    mailgun: {
+        baseUrl: 'api.mailgun.net',
+        from: 'PizzaForAll <your@sandbox.email>',
+        domain: 'your.sandbox.domain',
+        keys: {
+            public: 'your mailgun public key',
+            secret: 'your mailgun private key',
+        },
+        sandBoxEmails: [
+            'your sandbox email recipient(s)',
+        ]
+    },
+};
+
+// Export module
+module.exports = lib
