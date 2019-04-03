@@ -47,15 +47,9 @@ const a = [1,2,3,4,5,6,7,8,9,0,];
 
 
 function fromBehind(arr, pos) {
-    let behind = arr, forward = arr, i = 0, val;
+    let i = 0, revI = 0;
 
-    while (i < arr.length) {
-        console.log(i)
-        if (i > pos) val = arr[i]
-        i++
-    }
+    while (i < arr.length) if (i++ > pos) revI++;
 
-    return val;
+    return arr[revI];
 }
-
-console.log(fromBehind(a, 2))
