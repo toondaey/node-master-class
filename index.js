@@ -6,7 +6,8 @@ global.__baseDir = __dirname;
 
 // Dependencies
 const server = require('./lib/server'),
-    worker = require('./lib/workers');
+    worker = require('./lib/workers'),
+    cli = require('./lib/cli');
 
 /**
  * @description App module.
@@ -22,6 +23,11 @@ app.init = () => {
     server.init();
     // Start up all worker.
     worker.init();
+
+    // Start cli.
+    setTimeout(() => {
+        cli.init();
+    }, 50);
 };
 
 /**
