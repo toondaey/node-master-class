@@ -43,13 +43,72 @@
 
 // const gen = fib();
 
-const a = [1,2,3,4,5,6,7,8,9,0,];
+const r = (start, end, res, _rev) => {
+    res = Array.isArray(res) ? res : res;
 
+    if (start === end) {
+        res.push(end - start + (_rev ? 0 : start));
 
-function fromBehind(arr, pos) {
+        return res;
+    }
+
+    res.push(Math.abs((_rev ? 0 : -end) + end - start));
+
+    return r(start + 1, end, res, _rev);
+}
+
+const range = (start, end) => r(start, end, []);
+
+const a = range(0, 1200);
+
+let start = Date.now();
+
+function fromBehind(arr, pos, back, curr) {
+    back = back ? back : 0;
+    curr = curr ? curr : 0;
+
+    if (back == arr.length) return arr[curr];
+
+    if (back++ > pos) ++curr;
+
+    return fromBehind(arr, pos, back, curr);
+
+    // while (i < arr.length) if (i++ > pos) revI++;
+
+    // return arr[revI];
+}
+
+console.log(fromBehind(a, 1100));
+
+let end = Date.now();
+
+console.log(end - start);
+console.log('')
+
+start = Date.now();
+const fromBehind2 = (arr, pos) => {
     let i = 0, revI = 0;
 
     while (i < arr.length) if (i++ > pos) revI++;
 
     return arr[revI];
-}
+};
+
+console.log(fromBehind2(a, 1100));
+end = Date.now();
+console.log(end - start)
+
+// const fact = (n, f, a) => {
+//     if (n-- < 2) {
+//         f.push(a - 0);
+//         return f;
+//     }
+
+//     f.push(a - n);
+
+//     return fact(n, f, a);
+// };
+
+// const factorial = (n) => fact(n, [], n);
+
+// console.log(factorial(5));
