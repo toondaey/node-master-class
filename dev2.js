@@ -72,10 +72,6 @@ function fromBehind(arr, pos, back, curr) {
     if (back++ > pos) ++curr;
 
     return fromBehind(arr, pos, back, curr);
-
-    // while (i < arr.length) if (i++ > pos) revI++;
-
-    // return arr[revI];
 }
 
 console.log(fromBehind(a, 1100));
