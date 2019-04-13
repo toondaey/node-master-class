@@ -394,3 +394,15 @@ The web routes includes:
   * **login**
 
   * **signup**
+
+### CLI
+
+The admin aspect of the application has been built into the ClI.
+
+**Usage**: This can be used either by
+
+  > Starting the app and using the prompts that comes up in the command line; or
+
+  > By using the `node cli` command prefix.
+
+**PS** *When in the doubt, use the help feature.*
