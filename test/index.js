@@ -59,6 +59,7 @@ global.it = (description, test) => {
         } catch (error) {
             // Check that error is an assertion error or throw error
             if (error instanceof AssertionError) {
+
                 // If error is assertion error increment failures count
                 ++__testResult.failures.count;
 
