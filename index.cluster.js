@@ -8,6 +8,7 @@ port = 3000,
     debug = debuglog('server'),
     config = require('./config');
 
+// Server.
 var server = http.createServer((req, res) => {
     // Url parsing
     const parsedUrl = url.parse(req.url, true);
@@ -45,6 +46,10 @@ var server = http.createServer((req, res) => {
     console.log(`[${method.toUpperCase()}] ${config.port}: ${trimmedUrl}`);
 });
 
+//
+// Homework Assignment #6
+//
+
 // Running in cluster mode a.k.a swarm mode.
 if (cluster.isMaster) {
     // Nothing to do in the cluster master for now but log a debug
@@ -65,6 +70,7 @@ const handlers = {
     }
 };
 
+// Hello endpoint.
 handlers.hello = (data, cb) => {
     cb(200, { message: 'Hello Node!' });
 };

@@ -2,6 +2,7 @@ const http = require('http'),
     url = require('url')
     port = 3000,
     {StringDecoder} = require('string_decoder'),
+    { performance, } = require('perf_hooks'),
     config = require('./config');
 
 var server = http.createServer((req, res) => {
