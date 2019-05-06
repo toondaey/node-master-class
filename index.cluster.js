@@ -1,6 +1,10 @@
+/**
+ * Server setup
+ */
+// Dependencies...
 const http = require('http'),
     url = require('url')
-port = 3000,
+    port = 3000,
     { StringDecoder } = require('string_decoder'),
     cluster = require('cluster'),
     { cpus } = require('os'),
